@@ -1,0 +1,146 @@
+# Escribe un programa que pida al usuario dos números y muestre por pantalla su suma,
+# resta, multiplicación y división
+
+# pedimos dos numeros
+numero1=int(input("Escribe un numero: "))
+numero2=int(input("Escribe otro numero: "))
+#Mostramos suma
+print(numero1+numero2)
+#Mostramos resta
+print(numero1 - numero2)
+#Mostramos multiplicion
+print(numero1 * numero2)
+#mostramos division
+print(numero1 / numero2)
+
+# Escribe un programa que pida al usuario un número y muestre por pantalla su tabla de
+# multiplicar del 1 al 10.
+numero = int(input("Escribe un numero: "))
+for n in range(1,11):
+    print(numero * n)
+
+# Escribe un programa que pida al usuario un número y muestre por pantalla si es par o
+# impar.
+num = input("Escribe un numero: ")
+try:
+    num = int(num)
+    if num%2==0:
+        print(num, "es par")
+    else:
+        print(num, "es impar")
+except:
+    print("El valor debe ser un numero")
+
+#Escribe un programa que pida al usuario un número y muestre por pantalla si es primo
+#o no.
+try:
+    num = int(input("Escribe un numero: "))
+    no_es_primo = false
+    for i in range(2,num):
+        if num%i==0:
+            no_es_primo=true
+            break
+    if(no_es_primo):
+        print(num, "no es primo")
+    else:
+        print(num, "es primo")
+except:
+    print("El valor debe ser numerico")
+
+#Escribe un programa que pida al usuario un número y calcule su factorial
+
+try:
+    num = int(input("Escribe un numero: "))
+    factorial = 1
+    print("El factorial de", num, "es", end=" ")
+    for i in reversed(range(2,num+1)):
+        print(i,"x", end=" ")
+        factorial *= i
+    print("1=",factorial)
+except:
+    print("El valor debe ser numerico")
+
+#Escribe un programa que pida al usuario un número y muestre por pantalla si es
+#positivo, negativo o cero.
+try:
+    num = int(input("Escribe un numero: "))
+    if num>0:
+        print(num, "es mayor que 0")
+    elsif num<0:
+        print(num, "es menor que 0")
+    else:
+        print(num, "es cero")
+except:
+    print("Debes introducir un valor numerico")
+
+#Escribe un programa que pida al usuario dos números y muestre por pantalla el mayor
+#de ellos.
+
+try:
+    numero1 = int(input("Escribe un numero: "))
+    numero2 = int(input("Escribe otro numero: "))
+    mayor = numero1
+    if numero2 > mayor:
+        mayor = numero2
+    print(mayor, "es mayor")
+except:
+    print("El valor debe ser un entero")
+
+#Escribe un programa que pida al usuario tres números y muestre por pantalla el menor
+#de ellos.
+
+try:
+    numero1 = int(input("Escribe un numero: "))
+    numero2 = int(input("Escribe otro numero: "))
+    numero3 = int(input("Escribe otro numero: "))
+    mayor = numero1
+    if numero2 > mayor:
+        mayor = numero2
+        if numero3 > mayor:
+            mayor = numero3
+    print(mayor, "es el mayor")
+except:
+    print("El valor debe ser un entero")
+
+#Escribe un programa que pida al usuario un número y muestre por pantalla su
+#representación en binario.
+
+try:
+    numero = int(input("Escribe un numero: "))
+    print(bin(numero))
+except:
+    print(necesitamos un valor nuemrico)
+
+#Escribe un programa que pida al usuario un número y muestre por pantalla su
+#representación en binario. Sin usar la funcion bin
+try:
+    numero = int(input("Escribe un numero:"))
+    resto = abs(numero)
+    cadena = ""
+    while resto>1:
+        cadena += repr(resto%2)
+        resto = int(resto/2)  
+    if numero>0:
+        print("1", cadena, sep="")
+    elif numero<0:
+        print("-1", cadena, sep="")
+    else:
+        print("0")   
+except:
+    print("Necesitamos un valor numerico")
+
+#Escribe un programa que pida al usuario un número y muestre por pantalla si es un
+#número perfecto o no. Un número perfecto es un número entero positivo que es igual
+#a la suma de sus divisores propios positivos.
+try:
+    num = int(input("escribe un numero "))
+    acumulador = 0
+    for i in range(1,num):
+        if num%i == 0:
+            acumulador += i
+    if acumulador == num and num>0:
+        print(num, "es un numero perfecto")   
+    else:
+        print(num, "no es un numero perfecto")
+except:
+    print("Debe ser un numero positivo")

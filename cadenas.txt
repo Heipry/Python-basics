@@ -1,0 +1,83 @@
+#Escribe un programa que pida al usuario su nombre y su edad y muestre por pantalla
+#un mensaje personalizado.
+nombre = input("Escribe tu nombre: ")
+edad = input ("Escribe tu edad: ")
+print("Bienvenido", nombre, "a tus", edad, "años")
+
+#Escribe un programa que pida al usuario dos palabras y las muestre juntas separadas
+#por un espacio.
+palabra1 = input("Escribe una primera palabra: ")
+palabra2 = input("Escribe una segunda: ")
+print(f"{palabra1} {palabra2}")
+
+#Escribe un programa que pida al usuario una frase y la muestre al revés.
+frase = input("Escribe una frase: ")
+frase_invertida = frase[::-1]
+print(frase_invertida)
+
+#Escribe un programa que pida al usuario una cadena de texto y la convierta a
+#mayúsculas.
+
+frase = input("Escribe una frase: ")
+frase_mayuscula = frase.upper()
+print(frase_mayuscula)
+
+#Escribe un programa que pida al usuario una cadena de texto y muestre por pantalla si
+#la palabra "python" está en ella.
+frase = input("Frase: ")
+frase_m = frase.lower()
+if "python" in frase_m:
+    print("python está en", frase)
+else:   
+    print("python no está en", frase)
+
+#Escribe un programa que pida al usuario una cadena de texto y muestre por pantalla si
+#la longitud de la cadena es impar o par.
+
+frase = input("Frase: ")
+
+if len(frase) %2 == 0 :
+    print("La longitud de", frase, "es par")
+else:   
+    print("La longitud de", frase, "es impar")
+
+#Escribe un programa que pida al usuario una cadena de texto y muestre por pantalla la
+#primera letra y la última letra de la cadena.
+
+frase = input("Frase: ")
+
+print(frase[0],frase[-1]) 
+
+#Escribe un programa que pida al usuario una cadena de texto y muestre por pantalla la
+#cantidad de veces que aparece la letra "a" en la cadena.
+
+frase = input("Frase: ")
+contador = 0
+for letra in frase:
+    if letra=="a" or letra =="A":
+        contador += 1
+print("La letra a aparece", contador, "veces en la frase", frase)
+
+#Escribe un programa que pida al usuario una cadena de texto y muestre por pantalla
+#cuántas palabras tiene la cadena.
+frase = input("Frase: ")
+palabras = frase.split(" ")
+print("La frase", frase, "tiene", len(palabras), "palabras")
+
+#Escribe un programa que pida al usuario una cadena de texto y muestre por pantalla si
+#es un palíndromo (es decir, si se lee igual de izquierda a derecha que de derecha a
+#izquierda).
+frase = input("Frase: ")
+#palindromo por letras
+frase_r = frase[::-1]
+if frase==frase_r:
+    print(frase, "es un palindromo")
+else:
+    print(frase, "no es un palindromo")
+#palindromo por palabras
+palabras = frase.split(" ")
+palabras_r = palabras[::-1]
+if palabras == palabras_r:
+    print(palabras, "es una frase palindromo")
+else:
+    print(palabras, "no es una frase palindromo")
